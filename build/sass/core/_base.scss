@@ -1,0 +1,24 @@
+body {
+  background: $default-background;
+}
+
+//Bar divider list
+.list__divider-bar {
+  > li {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 15px;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

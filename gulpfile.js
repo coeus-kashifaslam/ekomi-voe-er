@@ -19,7 +19,6 @@
 	sass = require('gulp-sass'),
 	pleeease = require('gulp-pleeease'),
 	compass = require ('gulp-compass'),
-	csscomb = require ('gulp-csscomb'),
 
 	jshint = require('gulp-jshint'),
 	concat = require('gulp-concat'),
@@ -172,7 +171,6 @@ gulp.task('sass', function(){
 	return gulp.src(styles.in)
 	.pipe (compass(compassOptions))
 	.pipe(pleeease(pleeeaseOptions))
-	// .pipe(csscomb())
 	.pipe(sass(sassOptions))
 	.pipe(gulp.dest(styles.out))
 	.pipe(browsersync.reload({stream: true}));
