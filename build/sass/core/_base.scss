@@ -2,6 +2,13 @@ body {
   background: $default-background;
 }
 
+h1,
+.h1 {
+  font-size: $font-size-h1;
+  @extend %font-roboto-bold;
+  margin: 0 0 10px 0;
+}
+
 //Bar divider list
 .list__divider-bar {
   > li {
@@ -16,6 +23,7 @@ body {
       height: 15px;
     }
     &:last-child {
+      padding-right: 0 !important;
       &:after {
         display: none;
       }

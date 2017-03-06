@@ -16,8 +16,72 @@
 </head>
 </head>
 <body>
+    <nav class="navbar navbar-fixed-top site-nav">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site__nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src=images/loader.gif data-src="images/logo.png" alt="..." class="b-lazy img-responsive">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="site__nav">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Flag</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Company Reviews</a></li>
+                <li><a href="#">Salaries</a></li>
+                <li><a href="#">Interviews</a></li>
+                <li class="nav-item__featured"><a href="#">Write Review</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
     
+
+<main class="site-main">
+    <div class="main-wrapper">
+        <article class="hero-article">
+
+    <div class="hero-article__bg">
+        <img src=images/loader.gif data-src="images/hero.jpg" alt="..." class="b-lazy">
+    </div>
+
+    <div class="container">
+        <div class="hero-wrapper">
+            <h1 class="hero__title">Find a job that fits your life</h1>
+            <div class="hero__description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+            </div>
+            <div class="hero__search-component">
+                <form action="" class="form-inline">
+                    <div class="form-group form-group__keword">
+                        <input type="text" class="form-control" placeholder="Keyword or Company">
+                    </div>
+                    <div class="form-group form-group__location">
+                        <input type="text" class="form-control" placeholder="Location">
+                    </div>
+                    <button type="submit" class="form-group__submit btn btn-default"><img src=images/loader.gif data-src="images/search.svg" alt="..." class="b-lazy img-responsive"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+    </div>
+</main>
+
+
 
     <footer id="site-footer">
     <div class="footer-wrap">
@@ -48,5 +112,7 @@
 </footer>
     <script src="js/libs/jquery.min.js"></script>
 <script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/blazy.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

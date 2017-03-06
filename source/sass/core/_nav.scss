@@ -1,0 +1,101 @@
+%nav-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+//%nav-gradient-scrolled {
+//  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#29a00a+0,000000+100&0.5+0,0+100 */
+//  background: -moz-linear-gradient(top, rgba(41,160,10,0.9) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+//  background: -webkit-linear-gradient(top, rgba(41,160,10,0.9) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+//  background: linear-gradient(to bottom, rgba(41,160,10,0.9) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8029a00a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+//}
+.site-nav {
+  @extend %nav-gradient;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 60px;
+  border: 0 none;
+  margin: 0;
+  transition: all 0.7s ease-in-out;
+
+  &.nav-scrolled {
+    background: $default-theme;
+    transition: all 0.7s ease-in-out;
+    .navbar-nav {
+      > li {
+        &.nav-item__featured {
+          > a {
+            background: $white;
+            color: $default-theme;
+            transition: all 0.7s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    padding: 7px 15px;
+    height: 60px;
+  }
+
+
+  .navbar-nav {
+    @media (min-width: 1200px) {
+      margin-right: 15px;
+    }
+    > li {
+      > a {
+        font-size: $font-size-md;
+        color: $white;
+        border-bottom: 3px solid transparent;
+        padding: 18px 15px 19px 15px;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active{
+          border-bottom: 3px solid $white;
+          background: transparent;
+        }
+      }
+      &.nav-item__featured {
+        > a {
+          background: $default-theme;
+          transition: all 0.7s ease-in-out;
+          border-radius: 5px;
+          padding: 10px 15px 7px 15px;
+          margin-top: 10px;
+          &:hover,
+          &:focus,
+          &:active,
+          &.active {
+            border-bottom: 3px solid transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand {
+    > img {
+      max-width: 195px;
+    }
+  }
+  .site-nav {
+    .navbar-nav {
+      > li {
+        > a {
+          padding: 15px 10px 15px;
+          font-size: $font-size-tab;
+        }
+      }
+    }
+  }
+}

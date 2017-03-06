@@ -1,12 +1,12 @@
 {
-  "name": "starter",
+  "name": "ekomi-voe-er",
   "description": "",
   "main": "build/index.html",
   "authors": [
     "coeus-kashifaslam <kashif.aslam@coeus-solutions.de>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/coeus-kashifaslam/starter",
+  "homepage": "https://github.com/coeus-kashifaslam/ekomi-voe-er",
   "private": true,
   "ignore": [
     "**/.*",
@@ -14,5 +14,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }

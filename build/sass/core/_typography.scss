@@ -18,3 +18,10 @@ body {
   @extend %font-roboto;
   font-size: $font-size-regular;
 }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

@@ -1,0 +1,142 @@
+.hero-wrapper {
+  width: 100%;
+  max-width: 730px;
+}
+.hero__search-component {
+  background: $white;
+  border-radius: 5px;
+  position: relative;
+  padding: 0 65px 0 0;
+  box-shadow: 0 2px 5px -1px rgba(0,0,0,0.75);
+  .form-inline .form-control {
+    box-shadow: none;
+    width: 100%;
+    border: none;
+    height: 60px;
+    font-size: $font-size-md;
+    @include placeholder{
+      color: inherit;
+      font-size: $font-size-md;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+    &:focus {
+      @include placeholder{
+        color: transparent;
+      }
+    }
+  }
+  .form-group__keword {
+    width: 60%;
+  }
+  .form-group__location {
+    width: 39.3%;
+    border-left: 1px solid $border-default;
+  }
+  .form-group__submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $default-theme;
+    border-radius: 0 5px 5px 0;
+    padding: 0;
+    width: 67px;
+    &:hover,
+    &:focus,
+    & {
+      border: 0 none;
+      outline: none;
+      box-shadow: none;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero__search-component {
+    padding: 0;
+    .form-inline .form-control {
+      height: 45px;
+      border-radius: 0;
+    }
+    .form-group {
+      margin-bottom: 0;
+    }
+    .form-group__keword {
+      width: 100%;
+      .form-control {
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    .form-group__location {
+      width: 100%;
+      border: 0 none;
+      .form-control {
+        border-top: 1px solid $border-dark;
+      }
+    }
+    .form-group__submit {
+      width: 100%;
+      position: relative;
+      height: 45px;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+}
+
+
+
+.hero-article {
+  position: relative;
+  height: 740px;
+  vertical-align: middle;
+  overflow: hidden;
+  width: 100%;
+  .hero-article__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero-article {
+    height: 500px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  h1, .h1 {
+    font-size: $font-size-h1 / 1.4;
+  }
+  .hero-article {
+    height: 450px;
+    .hero-article__bg {
+      img {
+        max-width: none;
+        width: auto;
+      }
+    }
+  }
+}
