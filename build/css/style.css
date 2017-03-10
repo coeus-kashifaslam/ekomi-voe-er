@@ -5857,6 +5857,10 @@ h1, .h1 {
     max-width: 730px;
 }
 
+.hero__description {
+    margin-bottom: 60px;
+}
+
 .hero__search-component {
     background: #fff;
     border-radius: 5px;
@@ -5870,26 +5874,28 @@ h1, .h1 {
     width: 100%;
     border: none;
     height: 60px;
+    color: #333;
     font-size: 18px;
+    padding: 6px 20px;
 }
 
 .hero__search-component .form-inline .form-control::-webkit-input-placeholder {
-    color: inherit;
+    color: #adadad;
     font-size: 18px;
 }
 
 .hero__search-component .form-inline .form-control:-moz-placeholder {
-    color: inherit;
+    color: #adadad;
     font-size: 18px;
 }
 
 .hero__search-component .form-inline .form-control::-moz-placeholder {
-    color: inherit;
+    color: #adadad;
     font-size: 18px;
 }
 
 .hero__search-component .form-inline .form-control:-ms-input-placeholder {
-    color: inherit;
+    color: #adadad;
     font-size: 18px;
 }
 
@@ -5945,6 +5951,11 @@ h1, .h1 {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.hero__search-component .form-group__submit span {
+    font-size: 18px;
+    color: #fff;
 }
 
 .hero-article {
@@ -6454,6 +6465,9 @@ h1, .h1 {
         width: 300px;
     }
     .feedback__mobile {
+        display: none;
+    }
+    .hero__search-component .form-group__submit span {
         display: none;
     }
 }
@@ -6998,6 +7012,12 @@ h1, .h1 {
         margin-top: 20px;
         padding-top: 20px;
     }
+    .hero__description {
+        display: none;
+    }
+    .hero__title {
+        text-align: center;
+    }
     .hero__search-component {
         padding: 0;
     }
@@ -7026,6 +7046,17 @@ h1, .h1 {
         position: relative;
         height: 45px;
         border-radius: 0 0 5px 5px;
+    }
+    .hero__search-component .form-group__submit img {
+        position: relative;
+        -webkit-transform: none;
+        transform: none;
+        left: auto;
+        top: auto;
+        margin-right: 5px;
+    }
+    .hero__search-component .form-group__submit img, .hero__search-component .form-group__submit span {
+        display: inline-block;
     }
     h1, .h1 {
         font-size: 32.14286px;
