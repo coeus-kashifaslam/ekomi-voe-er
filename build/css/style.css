@@ -5717,6 +5717,12 @@ h1, .h1 {
     transition: all .5s ease-in-out;
 }
 
+.site-nav .navbar-brand {
+    padding: 15px;
+    height: 60px;
+    max-width: 275px;
+}
+
 .site-nav .navbar-brand > .navbar-brand__mobile {
     display: none;
 }
@@ -5743,12 +5749,6 @@ h1, .h1 {
     display: inline-block;
 }
 
-.site-nav .navbar-brand {
-    padding: 15px;
-    height: 60px;
-    max-width: 275px;
-}
-
 .site-nav .navbar-nav > li > a {
     font-size: 18px;
     color: #fff;
@@ -5759,6 +5759,10 @@ h1, .h1 {
 .site-nav .navbar-nav > li > a:hover, .site-nav .navbar-nav > li > a:focus, .site-nav .navbar-nav > li > a:active, .site-nav .navbar-nav > li > a.active {
     border-bottom: 3px solid #fff;
     background: transparent;
+}
+
+.site-nav .navbar-nav > li.nav-item__featured {
+    margin-left: 15px;
 }
 
 .site-nav .navbar-nav > li.nav-item__featured > a {
@@ -5984,6 +5988,52 @@ h1, .h1 {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.hero-article__bg .carousel-control.left, .hero-article__bg .carousel-control.right {
+    background: none;
+    top: 50%;
+    bottom: auto;
+    width: auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.hero-article__bg .carousel-control.left img, .hero-article__bg .carousel-control.right img {
+    max-width: 30px;
+}
+
+.hero-article__bg .carousel-control.left {
+    left: 30px;
+}
+
+.hero-article__bg .carousel-control.right {
+    right: 30px;
+}
+
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.carousel-fade .carousel-inner .active, .carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.carousel-fade .carousel-inner .next, .carousel-fade .carousel-inner .prev, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
 }
 
 @media print {
@@ -7062,11 +7112,21 @@ h1, .h1 {
         font-size: 32.14286px;
     }
     .hero-article {
-        height: 450px;
+        min-height: 265px;
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: auto;
     }
     .hero-article .hero-article__bg img {
         max-width: none;
-        width: auto;
+        width: 125%;
+    }
+    .hero-article .container {
+        -webkit-transform: none;
+        transform: none;
+        top: auto;
+        position: relative;
     }
 }
 
@@ -7157,21 +7217,31 @@ h1, .h1 {
     .hidden-sm {
         display: none !important;
     }
-    .navbar-brand {
-        max-width: 150px;
-    }
     .site-nav {
         min-height: 55px;
     }
     .site-nav .navbar-brand {
         height: 55px;
+        max-width: 175px;
     }
     .site-nav .navbar-nav > li > a {
         padding: 15px 10px;
         font-size: 14px;
     }
+    .site-nav .navbar-nav > li.nav-item__featured {
+        margin-left: 10px;
+    }
     .site-nav .navbar-nav > li.nav-item__featured > a {
         margin-top: 5px;
+    }
+    .hero-article__bg .carousel-control.left img, .hero-article__bg .carousel-control.right img {
+        max-width: 20px;
+    }
+    .hero-article__bg .carousel-control.left {
+        left: 15px;
+    }
+    .hero-article__bg .carousel-control.right {
+        right: 15px;
     }
 }
 
@@ -7209,19 +7279,22 @@ h1, .h1 {
     }
 }
 
-@media (max-width: 992px) {
-    .footer-wrap .list__quick-link > li {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-}
-
 @media (max-width: 1199px) {
+    .site-nav .navbar-nav {
+        margin-right: 15px;
+    }
     .footer-wrap {
         font-size: 13px;
     }
     .footer-wrap .list__quick-link li.item__lg {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-wrap .list__quick-link > li {
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 

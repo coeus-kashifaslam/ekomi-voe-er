@@ -5,13 +5,7 @@
   background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
-//%nav-gradient-scrolled {
-//  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#29a00a+0,000000+100&0.5+0,0+100 */
-//  background: -moz-linear-gradient(top, rgba(41,160,10,0.9) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-//  background: -webkit-linear-gradient(top, rgba(41,160,10,0.9) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-//  background: linear-gradient(to bottom, rgba(41,160,10,0.9) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8029a00a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-//}
+
 .site-nav {
   @extend %nav-gradient;
   position: fixed;
@@ -22,8 +16,13 @@
   border: 0 none;
   margin: 0;
   transition: all 0.5s ease-in-out;
-  .navbar-brand > .navbar-brand__mobile {
-    display: none;
+  .navbar-brand  {
+    padding: 15px;
+    height: 60px;
+    max-width: 275px;
+    > .navbar-brand__mobile {
+      display: none;
+    }
   }
 
   &.nav-scrolled {
@@ -51,11 +50,6 @@
     }
   }
 
-  .navbar-brand {
-    padding: 15px;
-    height: 60px;
-    max-width: 275px;
-  }
 
 
   .navbar-nav {
@@ -77,6 +71,7 @@
         }
       }
       &.nav-item__featured {
+        margin-left: 15px;
         > a {
           background: $default-theme;
           transition: all 0.5s ease-in-out;
@@ -94,37 +89,44 @@
     }
   }
 }
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar-brand {
-    max-width: 150px;
-  }
-  .site-nav {
-    min-height: 55px;
-    .navbar-brand {
-      height: 55px;
-    }
-    .navbar-nav {
-      > li {
-        > a {
-          padding: 15px 10px 15px;
-          font-size: $font-size-tab;
-        }
-        &.nav-item__featured {
-          > a {
-            margin-top: 5px;
-          }
-        }
-      }
-    }
-  }
-}
 .feedback__mobile {
   float: right;
   margin-top: 15px;
   margin-right: 10px;
   @media (min-width: 768px) {
     display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .site-nav {
+    .navbar-nav {
+      margin-right: 15px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .site-nav {
+    min-height: 55px;
+    .navbar-brand {
+      height: 55px;
+      max-width: 175px;
+    }
+    .navbar-nav {
+
+      > li {
+        > a {
+          padding: 15px 10px 15px;
+          font-size: $font-size-tab;
+        }
+        &.nav-item__featured {
+          margin-left: 10px;
+          > a {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 767px) {
@@ -175,22 +177,6 @@
          }
         &.nav-item__featured {
           display: none;
-          //> a {
-          //  border-bottom: 0 none;
-          //  transition: none;
-          //  margin: 0;
-          //  padding: 15px;
-          //  background: $white;
-          //  color: $default-theme;
-          //  border-radius: 0;
-          //  &:hover,
-          //  &:focus,
-          //  &:active,
-          //  &.active {
-          //    border-bottom: none;
-          //    transition: none;
-          //  }
-          //}
         }
       }
     }
