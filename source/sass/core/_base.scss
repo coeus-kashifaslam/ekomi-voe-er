@@ -1,7 +1,12 @@
 body {
-  background: $default-background;
+  background: $white;
 }
-
+@media (min-width: 1199px) {
+  .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 h1,
 .h1 {
   font-size: $font-size-h1;

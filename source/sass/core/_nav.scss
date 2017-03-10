@@ -18,30 +18,43 @@
   top: 0;
   left: 0;
   right: 0;
-  min-height: 60px;
+  min-height: 75px;
   border: 0 none;
   margin: 0;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  .navbar-brand > .navbar-brand__mobile {
+    display: none;
+  }
 
   &.nav-scrolled {
-    background: $default-theme;
-    transition: all 0.7s ease-in-out;
+    background: $white;
+    transition: all 0.5s ease-in-out;
     .navbar-nav {
       > li {
+        > a {
+          color: $text-dark;
+        }
         &.nav-item__featured {
           > a {
-            background: $white;
-            color: $default-theme;
-            transition: all 0.7s ease-in-out;
+            color: $white;
           }
         }
+      }
+    }
+    .navbar-brand {
+      > img {
+        display: none;
+      }
+      > .navbar-brand__mobile {
+        display: inline-block;
       }
     }
   }
 
   .navbar-brand {
-    padding: 7px 15px;
+    padding: 15px;
     height: 60px;
+    max-width: 275px;
   }
 
 
@@ -54,7 +67,7 @@
         font-size: $font-size-md;
         color: $white;
         border-bottom: 3px solid transparent;
-        padding: 18px 15px 19px 15px;
+        padding: 22px 15px;
         &:hover,
         &:focus,
         &:active,
@@ -66,10 +79,10 @@
       &.nav-item__featured {
         > a {
           background: $default-theme;
-          transition: all 0.7s ease-in-out;
+          transition: all 0.5s ease-in-out;
           border-radius: 5px;
           padding: 10px 15px 7px 15px;
-          margin-top: 10px;
+          margin-top: 15px;
           &:hover,
           &:focus,
           &:active,
@@ -84,10 +97,7 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-brand {
-    > img {
-      max-width: 195px;
-      margin-top: 4px;
-    }
+    max-width: 150px;
   }
   .site-nav {
     min-height: 55px;
@@ -109,25 +119,43 @@
     }
   }
 }
-
-
+.feedback__mobile {
+  float: right;
+  margin-top: 15px;
+  margin-right: 10px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .navbar-toggle {
     margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     .icon-bar {
-      background: $white;
+      background: $text-dark;
+      height: 3px;
+      width: 25px;
     }
   }
-  .navbar-brand {
-    > img {
-      max-width: 200px;
-    }
-  }
+
   .site-nav {
-    min-height: 50px;
-    background: $default-theme;
+    min-height: 40px;
+    background: $white;
     .navbar-brand {
       height: auto;
+      padding: 12px 15px;
+      max-width: 150px;
+    }
+    &, &.nav-scrolled {
+      .navbar-brand {
+        img {
+          display: none;
+        }
+        > .navbar-brand__mobile {
+          display: inline-block;
+        }
+      }
     }
     .navbar-nav {
       margin-bottom: 0;
@@ -135,32 +163,34 @@
         > a {
           padding: 15px;
           border-bottom: 0 none;
+          color: $text-dark;
           &:hover,
           &:focus,
           &:active,
           &.active {
             border-bottom: 0 none;
-            background: $white;
-            color: $default-theme;
+            background: $default-theme;
+            color: $white;
           }
          }
         &.nav-item__featured {
-          > a {
-            border-bottom: 0 none;
-            transition: none;
-            margin: 0;
-            padding: 15px;
-            background: $white;
-            color: $default-theme;
-            border-radius: 0;
-            &:hover,
-            &:focus,
-            &:active,
-            &.active {
-              border-bottom: none;
-              transition: none;
-            }
-          }
+          display: none;
+          //> a {
+          //  border-bottom: 0 none;
+          //  transition: none;
+          //  margin: 0;
+          //  padding: 15px;
+          //  background: $white;
+          //  color: $default-theme;
+          //  border-radius: 0;
+          //  &:hover,
+          //  &:focus,
+          //  &:active,
+          //  &.active {
+          //    border-bottom: none;
+          //    transition: none;
+          //  }
+          //}
         }
       }
     }
